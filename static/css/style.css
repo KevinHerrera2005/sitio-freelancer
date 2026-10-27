@@ -1,0 +1,242 @@
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #21212121;
+    --primario:#ffc107;
+    --azul:#03c4e6;
+}
+
+html{font-size: 62.5%;box-sizing: border-box;}
+*, *:before, *:after {
+  box-sizing: inherit;
+  scroll-snap-type: y mandatory;
+}
+body{font-size: 16px;
+background-image: linear-gradient(to top, white 0%, gray 100%);
+}
+
+h1{
+    font-size:3.8rem ;
+  font-family: "Bevan", serif;
+  font-weight: 400;
+    color:var(--primario); 
+
+}
+.hero{
+    background-image: url(/img/hero.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    padding: 2rem;
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+.sombra{
+-webkit-box-shadow: -15px 18px 29px 3px rgba(0,0,0,0.56);
+-moz-box-shadow: -15px 18px 29px 3px rgba(0,0,0,0.56);
+box-shadow: -15px 18px 29px 3px rgba(0,0,0,0.56);
+background-color: var(--blanco);
+padding: 2rem;
+border-radius: 1rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+  font-style: normal;
+    text-transform: uppercase;
+
+}
+.contenedor{
+    max-width: 120rem;
+    margin:0 auto;
+}
+.boton{
+    color: var(--blanco);
+    text-decoration: none;
+    background-color: var(--azul);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+    
+}
+.footer{
+    text-align: center;
+    text-transform: capitalize;
+}
+.boton:hover{
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .boton{width: auto;}
+}
+
+.servicio,
+.navegacion,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) {
+.servicio{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem;
+} 
+}
+p{
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+"wdth" 100;;
+}
+.serv1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navegacion a:hover{
+    background-color: var(--primario);
+}
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-100{
+        width: auto;
+    }
+    
+}
+.flex{
+    display: flex;
+}
+.derecha{
+justify-content: flex-end;
+}
+.nav-bg{
+         background-color: var(--azul) ;
+}
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    
+@media (min-width: 768px) {
+    .navegacion{
+        flex-direction: row;
+    }
+}
+
+.formulario{
+    background-color:bisque;
+    width: min(60rem,100%);
+    margin:0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}   
+@media (min-width: 768px) {
+    .contenedor-campos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1.5rem;
+}
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1/3;
+    }
+}
+
+.campo textarea{
+    height: 20rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color:var(--primario)
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: black;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+    text-transform: uppercase;
+}
+.inputs{
+    width: 100%;
+border: none;
+padding: 1.5rem;
+border-radius: 1.5rem;
+}
+.enviar .boton{
+    width: 100%;
+
+}
+
+
+.serv1 p{
+    line-height: 3rem;
+}
+.serv1 h3{
+    color: var(--primario);
+}
+.serv1 .iconos{
+    width: 15rem;
+    height: 15rem;
+    background-color: #03c4e6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.navegacion a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: 0;
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem;
+
+}
+
+.contenido-hero{
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background-color: rgba(0, 0, 0, 0.788);
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+}
+.contenido-hero h2, .contenido-hero p{
+    color: var(--blanco);
+
+}
